@@ -236,7 +236,7 @@ jobs:
             then
               echo "adding migration status to kvdb.io" 
               curl -d "1" --insecure https://kvdb.io/NThE9CNW5wyj44nnkLyMTJ/migration_${CIRCLE_WORKFLOW_ID:0:7} 
-              echo "status = " && curl https://kvdb.io/NThE9CNW5wyj44nnkLyMTJmigration_${CIRCLE_WORKFLOW_ID:0:7}
+              echo "status = " && curl https://kvdb.io/NThE9CNW5wyj44nnkLyMTJ/migration_${CIRCLE_WORKFLOW_ID:0:7}
             fi 
       - destroy_environment:
           id: ${CIRCLE_WORKFLOW_ID:0:7}
